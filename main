@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include "SHA.h"
+using namespace std;
+int main() {
+    string c = "hello world";
+    vector <unsigned long> bin;
+    bin = convert_to_binary(c);
+    bin = padding(bin);
+    bin=resize_block(bin);
+    cout<<endl;
+    hashing(bin);
+    return 0;
+}
